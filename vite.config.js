@@ -8,5 +8,6 @@ export default defineConfig({
     outDir: "docs",
     emptyOutDir: true,
   },
+  base: "/slim-mom-frontend/",
 });
 // ../docs
