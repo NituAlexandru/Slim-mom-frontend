@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Creating an Axios instance with a base URL
 const api = axios.create({
-  baseURL: "https://slim-mom-backend-live-920a7eebc60d.herokuapp.com/api", // Base URL for all API requests
+  baseURL: "https://git.heroku.com/slim-mom-backend-live.git", // Base URL for all API requests
   // baseURL: "http://localhost:5000/api",
 });
 
