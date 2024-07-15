@@ -24,7 +24,6 @@ Slimmom is built using a variety of technologies and tools, including:
 - **Frontend:** JavaScript, React + Vite
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
-- **State Management:** Redux-Toolkit
 - **Deployment:**
   - **Frontend:** GitHub Pages
   - **Backend:** Heroku
