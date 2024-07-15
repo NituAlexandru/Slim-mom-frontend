@@ -36,7 +36,7 @@ const PrivateRoute = ({ children }) => {
   }, [user, location]);
 
   // If user is authenticated, render the children components, otherwise redirect to login
-  return user ? children : <Navigate to="/login" />;
+  return user ? children : <Navigate to="/Slim-mom-frontend/login" />;
 };
 
 // Type checking for PrivateRoute component props
@@ -48,7 +48,11 @@ PrivateRoute.propTypes = {
 const PublicRoute = ({ children }) => {
   const { user } = useAuth(); // Accessing user from the auth context
   const lastPath = localStorage.getItem("lastPath");
-  return user ? <Navigate to={lastPath || "/diary"} /> : children;
+  return user ? (
+    <Navigate to={lastPath || "/Slim-mom-frontend/diary"} />
+  ) : (
+    children
+  );
 };
 
 // Type checking for PublicRoute component props
