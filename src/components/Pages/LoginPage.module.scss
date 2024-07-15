@@ -3,14 +3,14 @@
   align-items: center;
   width: 100%;
   @media (min-width: 768px) {
-    background-image: url("/Slim-mom-frontend/src/assets/home.webp");
+    background-image: url("https://i.ibb.co/9tHMkZX/home.webp");
     background-size: cover;
     background-position-x: right;
     background-size: 980px 820px; /* Setează dimensiunile imaginii de fundal */
     background-repeat: no-repeat;
   }
   @media (min-width: 1240px) {
-    background-image: url("/Slim-mom-frontend/src/assets/home.webp"),
-      url("/Slim-mom-frontend/src/assets/vector.webp");
+    background-image: url("https://i.ibb.co/9tHMkZX/home.webp"),
+      url("https://i.ibb.co/Bjv9kCy/Vector.webp");
   }
 }

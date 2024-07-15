@@ -5,15 +5,15 @@ const Logo = () => {
     <div className={styles.logo}>
       <picture>
         <source
-          srcSet="../../../src/assets/logo-d.png"
+          srcSet="https://i.ibb.co/4N2fQCG/logo-d.png"
           media="(min-width: 1024px)"
         />
         <source
-          srcSet="../../../src/assets/logo-t.png"
+          srcSet="https://i.ibb.co/ZT8jGXP/logo-t.png"
           media="(min-width: 768px)"
         />
         <img
-          src="../../../src/assets/logo-m.png"
+          src="https://i.ibb.co/0nn9VKD/logo-m.png"
           alt="Logo"
           className={styles.logoImage}
         />
