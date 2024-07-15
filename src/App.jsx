@@ -67,7 +67,10 @@ PublicRoute.propTypes = {
 function App() {
   useEffect(() => {
     const lastPath = localStorage.getItem("lastPath");
-    if (lastPath && lastPath !== window.location.pathname) {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      localStorage.removeItem("lastPath"); // Șterge `lastPath` dacă utilizatorul nu este autentificat
+    } else if (lastPath && lastPath !== window.location.pathname) {
       window.location.pathname = lastPath;
     }
   }, []);
