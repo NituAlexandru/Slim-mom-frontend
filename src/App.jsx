@@ -31,7 +31,10 @@ const PrivateRoute = ({ children }) => {
 
   useEffect(() => {
     if (user) {
-      localStorage.setItem("lastPath", location.pathname);
+      localStorage.setItem(
+        "lastPath",
+        `/Slim-mom-frontend${location.pathname}`
+      );
     }
   }, [user, location]);
 
@@ -70,7 +73,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/Slim-mom-frontend">
       <AuthProvider>
         <RegProvider>
           <div className={styles.app}>
