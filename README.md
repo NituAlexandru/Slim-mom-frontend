@@ -1,4 +1,4 @@
-# Slimmom App Documentation
+# SlimMom App Documentation
 
 ## Overview
 
