@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import PropTypes from "prop-types";
 import styles from "./Header.module.scss"; // Import your CSS module for styling
@@ -6,6 +6,12 @@ import Logo from "./Logo";
 
 const Header = () => {
   const { user, logout } = useAuth(); // Accessing user from the auth context
+  const navigate = useNavigate(); // Hook for navigation
+
+  const handleLogout = () => {
+    logout();
+    navigate("/Slim-mom-frontend/login"); // Redirect to login page after logout
+  };
 
   return (
     <header className={styles.header}>
@@ -28,7 +34,7 @@ const Header = () => {
                 {" "}
                 <span className={styles.navLink}>{user.name}</span>
                 <hr />
-                <button onClick={logout} className={styles.navButton}>
+                <button onClick={handleLogout} className={styles.navButton}>
                   Exit
                 </button>
               </div>
