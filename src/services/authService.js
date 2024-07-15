@@ -22,6 +22,7 @@ export const logout = async () => {
   await api.post("/auth/logout");
   // Removing the token from localStorage to log out the user
   localStorage.removeItem("token");
+  localStorage.removeItem("lastPath");
 };
 
 export const updateUserProfile = async (profileData) => {
