@@ -10,7 +10,7 @@ const Header = () => {
 
   const handleLogout = () => {
     logout();
-    navigate("/Slim-mom-frontend/login"); // Redirect to login page after logout
+    navigate("/login"); // Redirect to login page after logout
   };
 
   return (
