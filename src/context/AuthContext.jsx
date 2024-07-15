@@ -55,6 +55,7 @@ export const AuthProvider = ({ children }) => {
     dispatch({ type: "LOGOUT" });
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    localStorage.removeItem("lastPath");
     toast.info("Logout successful!");
   };
 

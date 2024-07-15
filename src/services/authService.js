@@ -18,11 +18,16 @@ export const register = async (name, email, password) => {
 
 // Function for logout
 export const logout = async () => {
-  // Making a POST request to the logout endpoint
-  await api.post("/auth/logout");
-  // Removing the token from localStorage to log out the user
-  localStorage.removeItem("token");
-  localStorage.removeItem("lastPath");
+  try {
+    // Making a POST request to the logout endpoint
+    await api.post("/auth/logout");
+  } catch (error) {
+    console.error("Error during logout:", error);
+  } finally {
+    // Removing specific items from localStorage
+    localStorage.removeItem("token");
+    localStorage.removeItem("lastPath");
+  }
 };
 
 export const updateUserProfile = async (profileData) => {
